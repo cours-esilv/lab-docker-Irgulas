@@ -1,0 +1,17 @@
+version: '3'
+services:
+  back:
+    image: [votre_image_back]
+    ports:
+      - "[port_local_back]:[port_conteneur_back]"
+    environment:
+      - WS_BACK_URL=[URL_backend]
+    # Autres configurations éventuelles
+
+  front:
+    image: [votre_image_front]
+    ports:
+      - "[port_local_front]:[port_conteneur_front]"
+    environment:
+      - WS_BACK_URL=[URL_backend]
+    # Autres configurations éventuelles
